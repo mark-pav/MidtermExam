@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BankPageActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Number: " />
+
+        <TextView
+            android:id="@+id/player1accNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance: " />
+
+            <TextView
+                android:id="@+id/plaer1balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Name: " />
+
+            <TextView
+                android:id="@+id/plaer1bankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer: " />
+
+            <TextView
+                android:id="@+id/plaer1CustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Number: " />
+
+        <TextView
+            android:id="@+id/plaer2accNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balance: " />
+
+            <TextView
+                android:id="@+id/plaer2balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Name: " />
+
+            <TextView
+                android:id="@+id/plaer2bankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Customer: " />
+
+            <TextView
+                android:id="@+id/plaer2CustomerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Player1DepositButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Deposit"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutLeft"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutLeft"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutLeft" />
+
+    <Button
+        android:id="@+id/Player1WithdrawButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Withdraw For A Game"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutLeft"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutLeft"
+        app:layout_constraintTop_toBottomOf="@+id/Player1DepositButton" />
+
+    <Button
+        android:id="@+id/Player2DepositButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Deposit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutRight"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutRight" />
+
+    <Button
+        android:id="@+id/Player2WithdrawButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Withdraw For A Game"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutRight"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutRight"
+        app:layout_constraintTop_toBottomOf="@+id/Player2DepositButton" />
+
+    <TextView
+        android:id="@+id/availableLOCAL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Currently in Game:"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutLeft"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutLeft"
+        app:layout_constraintTop_toBottomOf="@+id/Player1WithdrawButton" />
+
+    <TextView
+        android:id="@+id/AvailableFromGameTVPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutLeft"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutLeft"
+        app:layout_constraintTop_toBottomOf="@+id/availableLOCAL1" />
+
+    <TextView
+        android:id="@+id/availableLOCAL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currently in Game:"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutRight"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutRight"
+        app:layout_constraintTop_toBottomOf="@+id/Player2WithdrawButton" />
+
+    <TextView
+        android:id="@+id/AvailableFromGameTVPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayoutRight"
+        app:layout_constraintStart_toStartOf="@+id/linearLayoutRight"
+        app:layout_constraintTop_toBottomOf="@+id/availableLOCAL2" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="For now deposits are coming \nonly from the dice game, \n withdraws are made in $50 increments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
